@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizan Ali — AI/ML Engineer</title>
+<meta name="description" content="Portfolio of Faizan Ali — AI/ML Engineer building offline AI assistants, RAG pipelines, and full-stack applications with AI-assisted development.">
+<meta property="og:title" content="Faizan Ali — AI/ML Engineer">
+<meta property="og:description" content="Building offline AI assistants, RAG pipelines, and full-stack apps — using AI-assisted development to plan, build, and ship real software.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Faizan Ali — AI/ML Engineer">
+<meta name="twitter:description" content="Building offline AI assistants, RAG pipelines, and full-stack apps.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Faizan Ali","jobTitle":"AI/ML Engineer","email":"2007faizanali@gmail.com","telephone":"+919827666786","address":{"@type":"PostalAddress","addressLocality":"Satna","addressRegion":"Madhya Pradesh","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/-faizanali"]}
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366F1'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='14'%3EFA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{accent:'#6366F1',cyan:'#22D3EE'},fontFamily:{heading:['Space Grotesk','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}
+</script>
+<style>
+:root{
+--bg:#0A0A0F;--text:#F5F5F7;--text-sec:#9CA3AF;
+--accent:#6366F1;--secondary:#22D3EE;
+--border:#1F1F2E;--card:#111119;--card-border:#1F1F2E;
+--nav-bg:rgba(10,10,15,0.82);--toggle-bg:#1F1F2E;
+--glow:rgba(99,102,241,0.1);--glow-strong:rgba(99,102,241,0.25);
+}
+[data-theme="dusk"]{
+--bg:#0F0A14;--text:#F5F5F7;--text-sec:#A89FB5;
+--accent:#A78BFA;--secondary:#F472B6;
+--border:#1E1628;--card:#140E1C;--card-border:#1E1628;
+--nav-bg:rgba(15,10,20,0.82);--toggle-bg:#1E1628;
+--glow:rgba(167,139,250,0.1);--glow-strong:rgba(167,139,250,0.25);
+}
+*,*::before,*::after{transition:background-color 350ms ease,color 350ms ease,border-color 350ms ease,box-shadow 350ms ease}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation-duration:0ms!important;animation-delay:0ms!important}}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;margin:0;overflow-x:hidden}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+.dot-grid{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,var(--text) .5px,transparent .5px);background-size:28px 28px;opacity:.04}
+.skip-link{position:absolute;top:-100%;left:16px;z-index:10001;padding:8px 16px;background:var(--accent);color:#fff;border-radius:0 0 8px 8px;font-family:'Inter',sans-serif;font-weight:500;text-decoration:none}
+.skip-link:focus{top:0}
+*:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.theme-sw{width:58px;height:28px;border-radius:14px;background:var(--toggle-bg);position:relative;cursor:pointer;border:1px solid var(--border);padding:0;flex-shrink:0}
+.theme-sw-dots{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 7px;pointer-events:none}
+.theme-sw-dot{width:6px;height:6px;border-radius:50%}
+.theme-sw-knob{width:22px;height:22px;border-radius:50%;position:absolute;top:2px;left:2px;display:flex;align-items:center;justify-content:center;transition:transform 380ms cubic-bezier(.68,-.55,.27,1.55),background-color 350ms ease,box-shadow 350ms ease}
+.theme-sw-knob-inner{width:7px;height:7px;border-radius:50%;transition:background-color 350ms ease}
+.nav-link{position:relative;color:var(--text-sec);transition:color 150ms ease;text-decoration:none;font-size:.875rem;font-weight:500}
+.nav-link:hover,.nav-link.active{color:var(--text)}
+.nav-link.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--accent);border-radius:1px}
+.mobile-menu{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+body.menu-open{overflow:hidden}
+.cursor-glow{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,var(--glow) 0%,transparent 70%);pointer-events:none;transform:translate(-50%,-50%);z-index:0;will-change:left,top}
+.grad-border{position:relative;border-radius:16px}
+.grad-border::before{content:'';position:absolute;inset:-1.5px;border-radius:17px;background:linear-gradient(135deg,var(--accent) 0%,var(--secondary) 50%,var(--accent) 100%);z-index:-1;opacity:.5}
+.sec-num{position:absolute;right:-1%;top:6%;font-family:'Space Grotesk';font-size:clamp(5rem,13vw,10rem);font-weight:700;opacity:.02;color:var(--accent);line-Height:1;pointer-events:none;user-select:none}
+.sec-label{display:flex;align-items:center;gap:10px}
+.sec-label-line{width:20px;height:2px;background:var(--accent);border-radius:1px;flex-shrink:0}
+.skill-row{border-bottom:1px solid var(--border);padding:18px 0;position:relative}
+.skill-row::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:2px;background:var(--secondary);opacity:.2;border-radius:1px}
+.skill-pill{display:inline-block;padding:5px 13px;border-radius:6px;font-size:.8125rem;margin:3px 4px 3px 0;background:var(--card);border:1px solid var(--card-border);color:var(--secondary);transition:transform 150ms ease,border-color 150ms ease,box-shadow 150ms ease;cursor:default}
+.skill-pill:hover{transform:translateY(-1px);border-color:var(--accent);box-shadow:0 4px 12px -4px var(--glow-strong)}
+.stat-card{background:var(--card);border:1px solid var(--card-border);border-top:2px solid var(--accent);border-radius:0 0 12px 12px;padding:18px 22px;transition:transform 250ms ease,box-shadow 250ms ease}
+.stat-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -8px var(--glow-strong)}
+.project-card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 28px 24px;transition:transform 250ms ease,box-shadow 250ms ease,border-color 250ms ease}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px var(--glow-strong);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.cert-badge{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:20px 24px;transition:transform 250ms ease,border-color 250ms ease,box-shadow 250ms ease;text-decoration:none;color:var(--text);display:block}
+.cert-badge:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 28px -8px var(--glow-strong)}
+.contact-link{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid var(--border);background:var(--card);transition:transform 150ms ease,border-color 150ms ease,box-shadow 150ms ease,text-decoration,none;color:var(--text);font-size:.9375rem;width:100%}
+.contact-link:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 20px -6px var(--glow-strong)}
+.tl-line{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent),var(--border) 80%,transparent)}
+.tl-dot{position:absolute;left:-4px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);box-shadow:0 0 12px var(--glow-strong)}
+.exp-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:20px 24px;transition:box-shadow 250ms ease}
+.exp-card:hover{box-shadow:0 8px 20px -6px var(--glow-strong)}
+.edu-card{background:var(--card);border:1px solid var(--card-border);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.pulse-dot{animation:pulse-dot 2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.pulse-dot{animation:none}}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;opacity:.07;background:radial-gradient(circle,var(--accent) 0%,transparent 70%)}
+.about-bar{width:3px;min-height:40px;background:var(--accent);border-radius:2px;flex-shrink:0;opacity:.6}
+.contact-deco{position:absolute;width:200px;height:200px;border:1px solid var(--border);border-radius:50%;pointer-events:none;opacity:.3}
+.contact-deco-inner{position:absolute;inset:30px;border:1px dashed var(--border);border-radius:50%;pointer-events:none;opacity:.4}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="noise" aria-hidden="true"></div>
+<div class="dot-grid" aria-hidden="true"></div>
+<div id="root"></div>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+const{useState,useEffect,useRef,useCallback,createContext,useContext}=React;
+
+const IP={
+pin:'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z||M12 7a3 3 0 100 6 3 3 0 000-6z',
+mail:'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z||M22 6l-10 7L2 6',
+phone:'M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z',
+linkedin:'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z||M2 9h4v12H2z||M4 6a2 2 0 100-4 2 2 0 000 4z',
+github:'M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22',
+externalLink:'M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6||M15 3h6v6||M10 14L21 3',
+arrowRight:'M5 12h14||M12 5l7 7-7 7',
+menu:'M3 12h18||M3 6h18||M3 18h18',
+x:'M18 6L6 18||M6 6l12 12',
+copy:'M20 9h-9a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-9a2 2 0 00-2-2z||M6 15H5a2 2 0 01-2-2V5a2 2 0 012-2h8a2 2 0 012 2v1',
+check:'M20 6L9 17l-5-5',
+};
+
+function Icon({name,size=20,className=''}){
+const paths=IP[name]||'';
+return(
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+{paths.split('||').map((p,i)=><path key={i} d={p}/>)}
+</svg>
+);
+}
+
+const Ctx=createContext();
+function useCtx(){return useContext(Ctx)}
+
+function useReducedMotion(){
+const[r,setR]=useState(false);
+useEffect(()=>{const m=window.matchMedia('(prefers-reduced-motion: reduce)');setR(m.matches);const h=e=>setR(e.matches);m.addEventListener('change',h);return()=>m.removeEventListener('change',h)},[]);
+return r;
+}
+
+function useReveal(delay=0){
+const[vis,setVis]=useState(false);
+const ref=useRef(null);
+const rm=useReducedMotion();
+useEffect(()=>{
+const el=ref.current;if(!el)return;
+const obs=new IntersectionObserver(([e])=>{
+if(e.isIntersecting){
+if(rm){setVis(true);obs.unobserve(el);return}
+requestAnimationFrame(()=>requestAnimationFrame(()=>setVis(true)));
+obs.unobserve(el);
+}
+},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+obs.observe(el);return()=>obs.disconnect();
+},[delay,rm]);
+return{ref,vis,style:{opacity:vis?1:0,transform:vis?'translateY(0)':'translateY(28px)',transition:rm?'none':`opacity 480ms ease ${delay}ms, transform 480ms ease ${delay}ms`}};
+}
+
+function useCountUp(target,active,dur=1400,dec=0){
+const[val,setVal]=useState(0);const done=useRef(false);const rm=useReducedMotion();
+useEffect(()=>{
+if(!active||done.current)return;done.current=true;
+if(rm){setVal(target);return}
+const t0=performance.now();
+function tick(now){const p=Math.min((now-t0)/dur,1);const e=1-Math.pow(1-p,3);setVal(dec>0?parseFloat((e*target).toFixed(dec)):Math.round(e*target));if(p<1)requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+},[active,target,dur,dec,rm]);return val;
+}
+
+function useActiveSection(ids){
+const[active,setActive]=useState('');
+useEffect(()=>{
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)})},{threshold:0.2,rootMargin:'-80px 0px -40% 0px'});
+ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el)});return()=>obs.disconnect();
+},ids);return active;
+}
+
+function Reveal({children,delay=0,className=''}){
+const{ref,vis,style}=useReveal(delay);
+return(<div ref={ref} className={className} style={style}>{children}</div>);
+}
+
+function CyclingText({words}){
+const[idx,setIdx]=useState(0);const[out,setOut]=useState(false);const rm=useReducedMotion();
+useEffect(()=>{
+if(rm)return;
+const iv=setInterval(()=>{setOut(true);setTimeout(()=>{setIdx(p=>(p+1)%words.length);setOut(false)},300)},2600);
+return()=>clearInterval(iv);
+},[words.length,rm]);
+return(
+<span style={{display:'inline-block',minWidth:'180px',position:'relative'}}>
+<span style={{display:'inline-block',color:'var(--accent)',fontWeight:600,opacity:out?0:1,transform:out?'translateY(-8px)':'translateY(0)',transition:rm?'none':'opacity 300ms ease, transform 300ms ease'}}>{words[idx]}</span>
+</span>
+);
+}
+
+function RAGPipeline(){
+const[lit,setLit]=useState(-1);const ref=useRef(null);const rm=useReducedMotion();
+useEffect(()=>{
+const el=ref.current;if(!el)return;
+const obs=new IntersectionObserver(([e])=>{
+if(e.isIntersecting){
+if(rm){setLit(4);obs.unobserve(el);return}
+for(let i=0;i<5;i++)setTimeout(()=>setLit(i),i*420);
+obs.unobserve(el);
+}
+},{threshold:0.4});obs.observe(el);return()=>obs.disconnect();
+},[rm]);
+const steps=['Docs','Embed','FAISS','LLM','Answer'];
+return(
+<div ref={ref} className="flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap mt-5 mb-1" aria-hidden="true">
+{steps.map((s,i)=>(
+<React.Fragment key={s}>
+<span className="font-mono text-xs px-2.5 sm:px-3 py-1.5 rounded-md" style={{
+border:'1px solid '+(i<=lit?'var(--accent)':'var(--card-border)'),
+background:i<=lit?'var(--accent)':'var(--card)',
+color:i<=lit?'#fff':'var(--text-sec)',
+boxShadow:i<=lit?'0 0 18px var(--glow-strong)':'none',
+transition:rm?'none':'all 400ms ease'
+}}>{s}</span>
+{i<steps.length-1&&<span style={{color:i<lit?'var(--accent)':'var(--border)',transition:rm?'none':'color 400ms ease',fontSize:'.75rem'}}>&#8594;</span>}
+</React.Fragment>
+))}
+</div>
+);
+}
+
+function TiltCard({children,className=''}){
+const inner=useRef(null);const glow=useRef(null);const rm=useReducedMotion();
+const onMove=useCallback(e=>{
+if(rm)return;const c=inner.current;const g=glow.current;if(!c)return;
+const r=c.getBoundingClientRect();const x=e.clientX-r.left;const y=e.clientY-r.top;
+const rx=((y-r.height/2)/(r.height/2))*-6;const ry=((x-r.width/2)/(r.width/2))*6;
+c.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.015)`;
+if(g){g.style.left=x+'px';g.style.top=y+'px'}
+},[rm]);
+const onLeave=useCallback(()=>{if(inner.current)inner.current.style.transform='perspective(1000px) rotateX(0) rotateY(0) scale(1)'},[]);
+return(
+<div className={className} style={{perspective:'1000px'}}>
+<div ref={inner} onMouseMove={onMove} onMouseLeave={onLeave} style={{transformStyle:'preserve-3d',transition:rm?'none':'transform 160ms ease-out',position:'relative',overflow:'hidden',borderRadius:'16px'}}>
+<div ref={glow} className="cursor-glow" aria-hidden="true"/>
+<div style={{position:'relative',zIndex:1}}>{children}</div>
+</div>
+</div>
+);
+}
+
+function ThemeToggle(){
+const{theme,toggle}=useCtx();
+const isVoid=theme==='void';
+return(
+<button className="theme-sw" onClick={toggle} aria-label="Switch color theme">
+<div className="theme-sw-dots">
+<span className="theme-sw-dot" style={{background:'#6366F1'}}/>
+<span className="theme-sw-dot" style={{background:'#A78BFA'}}/>
+</div>
+<div className="theme-sw-knob" style={{
+transform:isVoid?'translateX(0)':'translateX(30px)',
+background:isVoid?'#6366F1':'#A78BFA',
+boxShadow:isVoid?'0 0 10px rgba(99,102,241,.4)':'0 0 10px rgba(167,139,250,.4)'
+}}>
+<span className="theme-sw-knob-inner" style={{background:isVoid?'#22D3EE':'#F472B6'}}/>
+</div>
+</button>
+);
+}
+
+function Navbar(){
+const[scrolled,setScrolled]=useState(false);const[mobileOpen,setMobileOpen]=useState(false);
+const ids=['about','skills','projects','experience','contact'];
+const active=useActiveSection(ids);
+useEffect(()=>{const h=()=>setScrolled(window.scrollY>60);window.addEventListener('scroll',h,{passive:true});return()=>window.removeEventListener('scroll',h)},[]);
+useEffect(()=>{document.body.classList.toggle('menu-open',mobileOpen);return()=>document.body.classList.remove('menu-open')},[mobileOpen]);
+const links=[{l:'About',h:'#about'},{l:'Skills',h:'#skills'},{l:'Projects',h:'#projects'},{l:'Experience',h:'#experience'},{l:'Contact',h:'#contact'}];
+const go=(e,h)=>{e.preventDefault();setMobileOpen(false);document.querySelector(h)?.scrollIntoView({behavior:'smooth'})};
+return(
+<>
+<nav className="fixed top-0 left-0 right-0 z-50" style={{
+padding:scrolled?'10px 0':'20px 0',background:scrolled?'var(--nav-bg)':'transparent',
+backdropFilter:scrolled?'blur(14px)':'none',WebkitBackdropFilter:scrolled?'blur(14px)':'none',
+borderBottom:scrolled?'1px solid var(--border)':'1px solid transparent',
+transition:'padding 300ms ease, background 350ms ease, border-color 350ms ease, backdrop-filter 350ms ease'
+}} role="navigation" aria-label="Main navigation">
+<div className="max-w-6xl mx-auto px-5 sm:px-6 flex items-center justify-between">
+<a href="#" className="font-heading font-bold text-lg tracking-tight" style={{color:'var(--accent)',textDecoration:'none'}}>FA</a>
+<div className="hidden md:flex items-center gap-7">
+{links.map(lk=>(<a key={lk.h} href={lk.h} onClick={e=>go(e,lk.h)} className={'nav-link '+(active===lk.h.slice(1)?'active':'')}>{lk.l}</a>))}
+</div>
+<div className="flex items-center gap-3">
+<ThemeToggle/>
+<button className="md:hidden p-1.5" onClick={()=>setMobileOpen(!mobileOpen)} aria-label={mobileOpen?'Close menu':'Open menu'} style={{color:'var(--text)',background:'none',border:'none',cursor:'pointer'}}>
+<Icon name={mobileOpen?'x':'menu'} size={22}/>
+</button>
+</div>
+</div>
+</nav>
+{mobileOpen&&(
+<div className="mobile-menu md:hidden" role="dialog" aria-label="Mobile navigation">
+{links.map(lk=>(<a key={lk.h} href={lk.h} onClick={e=>go(e,lk.h)} className="font-heading text-2xl font-semibold" style={{color:'var(--text)',textDecoration:'none'}}>{lk.l}</a>))}
+<div className="mt-4"><ThemeToggle/></div>
+</div>
+)}
+</>
+);
+}
+
+function Hero(){
+const goProjects=e=>{e.preventDefault();document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})};
+const goContact=e=>{e.preventDefault();document.querySelector('#contact')?.scrollIntoView({behavior:'smooth'})};
+return(
+<section className="relative min-h-screen flex items-end pb-16 sm:pb-20 pt-28 sm:pt-32 overflow-hidden">
+<div className="hero-orb" aria-hidden="true" style={{width:'clamp(300px,45vw,650px)',height:'clamp(300px,45vw,650px)',top:'5%',right:'-5%'}}/>
+<div className="absolute -right-4 sm:right-4 lg:right-16 top-16 sm:top-20 select-none pointer-events-none" aria-hidden="true" style={{fontFamily:'Space Grotesk',fontSize:'clamp(9rem,28vw,24rem)',fontWeight:700,opacity:.02,color:'var(--text)',lineHeight:1,letterSpacing:'-0.04em'}}>FA</div>
+<div className="max-w-6xl mx-auto px-5 sm:px-6 w-full relative z-10">
+<Reveal delay={0}>
+<div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8" style={{background:'rgba(34,197,94,.06)',color:'#22C55E',border:'1px solid rgba(34,197,94,.15)'}}>
+<span className="w-2 h-2 rounded-full pulse-dot" style={{background:'#22C55E',flexShrink:0}}/>
+Open to Internships &amp; Opportunities
+</div>
+</Reveal>
+<Reveal delay={80}>
+<h1 className="font-heading font-bold leading-none" style={{fontSize:'clamp(3rem,10vw,7rem)',letterSpacing:'-0.04em',color:'var(--text)'}}>Faizan Ali</h1>
+</Reveal>
+<Reveal delay={160}>
+<p className="mt-4 sm:mt-5 text-lg sm:text-xl font-body" style={{color:'var(--text-sec)',lineHeight:1.6}}>
+B.Tech CSE (AI &amp; ML) Student &mdash; <CyclingText words={['AI Applications','Python','Web Development']}/>
+</p>
+</Reveal>
+<Reveal delay={240}>
+<p className="mt-5 sm:mt-6 text-base sm:text-lg font-body max-w-2xl" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+Building offline AI assistants, RAG pipelines, and full-stack apps &mdash; using AI-assisted development to plan, build, and ship real software.
+</p>
+</Reveal>
+<Reveal delay={320}>
+<div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+<a href="#projects" onClick={goProjects} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-sm text-white transition-transform duration-150 hover:-translate-y-0.5" style={{background:'var(--accent)',textDecoration:'none'}}>
+View Projects <Icon name="arrowRight" size={16}/>
+</a>
+<a href="#contact" onClick={goContact} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-sm transition-transform duration-150 hover:-translate-y-0.5" style={{color:'var(--accent)',border:'1px solid var(--accent)',background:'transparent',textDecoration:'none'}}>Get in Touch</a>
+<span className="inline-flex items-center gap-1.5 text-sm ml-1" style={{color:'var(--text-sec)'}}>
+<Icon name="pin" size={14}/>Satna, Madhya Pradesh, India
+</span>
+</div>
+</Reveal>
+</div>
+</section>
+);
+}
+
+function StatNum({ref:rf,style,label,value,decimals,vis}){
+const num=useCountUp(value,vis,1400,decimals);
+return(
+<div ref={rf} style={style} className="stat-card">
+<div className="font-mono text-xs mb-2" style={{color:'var(--text-sec)'}}>{label}</div>
+<div className="font-heading font-semibold text-2xl">{num}</div>
+</div>
+);
+}
+
+function About(){
+const r1=useReveal(0);const r2=useReveal(80);const r3=useReveal(160);const r4=useReveal(240);
+return(
+<section id="about" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden">
+<div className="sec-num" aria-hidden="true">01</div>
+<div className="max-w-6xl mx-auto px-5 sm:px-6">
+<div ref={r1.ref} style={r1.style}>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>About</span>
+</div>
+</div>
+<div className="mt-10 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+<div ref={r2.ref} style={r2.style} className="lg:col-span-3">
+<div className="flex gap-4">
+<div className="about-bar hidden lg:block" aria-hidden="true"/>
+<p className="text-base sm:text-lg leading-relaxed" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+B.Tech CSE (AI &amp; ML) student focused on AI engineering and AI-assisted software development. Experience building offline AI assistants, RAG pipelines, and full-stack web applications, using AI tools throughout planning, coding, debugging, and delivery. Seeking internships in AI/ML or software development.
+</p>
+</div>
+</div>
+<div className="lg:col-span-2 grid grid-cols-2 gap-3 sm:gap-4">
+<div ref={r3.ref} style={r3.style} className="stat-card">
+<div className="font-mono text-xs mb-2" style={{color:'var(--text-sec)'}}>Degree</div>
+<div className="font-heading font-semibold text-lg leading-snug">B.Tech CSE</div>
+<div className="font-mono text-xs mt-2" style={{color:'var(--text-sec)'}}>RGPV 2023–2027</div>
+</div>
+<div ref={r3.ref} style={{...r3.style,transitionDelay:'160ms'}} className="stat-card">
+<div className="font-mono text-xs mb-2" style={{color:'var(--text-sec)'}}>Branch</div>
+<div className="font-heading font-semibold text-lg leading-snug">AI &amp; ML</div>
+</div>
+<StatNum ref={r4.ref} style={r4.style} vis={r4.vis} label="CGPA" value={7.09} decimals={2}/>
+<div ref={r4.ref} style={{...r4.style,transitionDelay:'320ms'}} className="stat-card">
+<div className="font-mono text-xs mb-2" style={{color:'var(--text-sec)'}}>Shipped</div>
+<div className="font-heading font-semibold text-2xl">3</div>
+<div className="font-mono text-xs mt-1" style={{color:'var(--text-sec)'}}>Projects</div>
+</div>
+<div ref={r4.ref} style={{...r4.style,transitionDelay:'400ms'}} className="stat-card col-span-2">
+<div className="font-mono text-xs mb-1.5" style={{color:'var(--text-sec)'}}>Location</div>
+<div className="font-heading font-semibold text-sm flex items-center gap-1.5" style={{color:'var(--text)'}}><Icon name="pin" size={13} style={{color:'var(--accent)'}}/>Satna, Madhya Pradesh, India</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+);
+}
+
+function Skills(){
+const skills=[
+{cat:'Languages',items:['Python','JavaScript','HTML','CSS'],icon:'code'},
+{cat:'AI / ML',items:['LangChain','RAG','LLMs','Generative AI','FAISS','HuggingFace'],icon:'brain'},
+{cat:'Frameworks & Tools',items:['Flask','Electron','Git/GitHub','Google Apps Script'],icon:'wrench'},
+{cat:'Data & Analytics',items:['Excel','Power BI','Tableau','Data Visualization'],icon:'chart'},
+{cat:'Core Strengths',items:['Problem Solving','Debugging'],icon:'zap'},
+];
+return(
+<section id="skills" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="sec-num" aria-hidden="true">02</div>
+<div className="max-w-4xl mx-auto px-5 sm:px-6">
+<Reveal>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Skills</span>
+</div>
+</Reveal>
+<div className="mt-10 pl-3 sm:pl-4">
+{skills.map((s,i)=>(
+<Reveal key={s.cat} delay={i*70}>
+<div className="skill-row flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-0">
+<div className="font-mono text-xs sm:text-sm shrink-0 sm:w-48 pt-1 pl-3 sm:pl-0" style={{color:'var(--text-sec)'}}>
+<span style={{color:'var(--secondary)',marginRight:'6px'}}>&#x25B8;</span>{s.cat}
+</div>
+<div className="flex-1 pl-3 sm:pl-0">
+{s.items.map(it=><span key={it} className="skill-pill">{it}</span>)}
+</div>
+</div>
+</Reveal>
+))}
+</div>
+</div>
+</section>
+);
+}
+
+function Projects(){
+return(
+<section id="projects" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="sec-num" aria-hidden="true">03</div>
+<div className="max-w-6xl mx-auto px-5 sm:px-6">
+<Reveal>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Projects</span>
+</div>
+</Reveal>
+<div className="mt-10 grid grid-cols-1 lg:grid-cols-5 gap-6">
+<TiltCard className="lg:col-span-3">
+<div className="grad-border" style={{background:'var(--card)',borderRadius:'16px',padding:'28px 28px 24px'}}>
+<Reveal>
+<div className="flex items-center gap-2 mb-4">
+<span className="font-mono text-xs px-2.5 py-1 rounded-md font-medium" style={{background:'var(--accent)',color:'#fff'}}>FEATURED</span>
+</div>
+<h3 className="font-heading font-bold text-xl sm:text-2xl" style={{color:'var(--text)'}}>Offline AI Assistant (SRKG AI)</h3>
+</Reveal>
+<Reveal delay={80}>
+<div className="flex flex-wrap gap-1.5 mt-3">
+{['Python','Flask','LangChain','FAISS','HuggingFace','Ollama'].map(t=>(
+<span key={t} className="font-mono text-xs px-2 py-0.5 rounded" style={{background:'var(--bg)',color:'var(--secondary)',border:'1px solid var(--card-border)'}}>{t}</span>
+))}
+</div>
+</Reveal>
+<Reveal delay={160}>
+<p className="mt-4 text-sm leading-relaxed" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+ChatGPT-style offline assistant for natural-language Q&amp;A over PDFs, running local LLMs via Ollama; RAG pipeline with PyPDFLoader, FAISS semantic retrieval, HuggingFace embeddings; LangChain orchestrating document processing &rarr; retrieval &rarr; response.
+</p>
+</Reveal>
+<Reveal delay={240}><RAGPipeline/></Reveal>
+<Reveal delay={300}>
+<div className="flex items-center gap-5 mt-5 pt-4" style={{borderTop:'1px solid var(--card-border)'}}>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="github" size={15}/>Source
+</a>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="externalLink" size={15}/>Live Demo
+</a>
+</div>
+</Reveal>
+</div>
+</TiltCard>
+<div className="lg:col-span-2 flex flex-col gap-6">
+<Reveal delay={120}>
+<div className="project-card flex-1">
+<div className="flex items-start justify-between gap-2">
+<h3 className="font-heading font-semibold text-lg" style={{color:'var(--text)'}}>CampusLog</h3>
+<span className="font-mono text-xs px-2 py-0.5 rounded shrink-0" style={{background:'var(--bg)',color:'var(--secondary)',border:'1px solid var(--card-border)'}}>Desktop</span>
+</div>
+<div className="font-mono text-xs mt-1 mb-3" style={{color:'var(--text-sec)'}}>Lab Access Management System</div>
+<div className="flex flex-wrap gap-1.5 mb-3">
+{['JavaScript','Electron','HTML','CSS'].map(t=>(
+<span key={t} className="font-mono text-xs px-2 py-0.5 rounded" style={{background:'var(--bg)',color:'var(--secondary)',border:'1px solid var(--card-border)'}}>{t}</span>
+))}
+</div>
+<p className="text-sm leading-relaxed" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+Desktop app managing campus lab access info end-to-end; built with AI-assisted development for planning, code, debugging, and speed.
+</p>
+<div className="flex items-center gap-4 mt-4 pt-3" style={{borderTop:'1px solid var(--card-border)'}}>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="github" size={15}/>Source
+</a>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="externalLink" size={15}/>Live Demo
+</a>
+</div>
+</div>
+</Reveal>
+<Reveal delay={200}>
+<div className="project-card flex-1">
+<div className="flex items-start justify-between gap-2">
+<h3 className="font-heading font-semibold text-lg" style={{color:'var(--text)'}}>Technovation.com</h3>
+<span className="font-mono text-xs px-2 py-0.5 rounded shrink-0" style={{background:'var(--bg)',color:'var(--secondary)',border:'1px solid var(--card-border)'}}>Web</span>
+</div>
+<div className="font-mono text-xs mt-1 mb-3" style={{color:'var(--text-sec)'}}>Event Registration Website</div>
+<div className="flex flex-wrap gap-1.5 mb-3">
+{['Google Apps Script','JavaScript','HTML','CSS'].map(t=>(
+<span key={t} className="font-mono text-xs px-2 py-0.5 rounded" style={{background:'var(--bg)',color:'var(--secondary)',border:'1px solid var(--card-border)'}}>{t}</span>
+))}
+</div>
+<p className="text-sm leading-relaxed" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+Registration workflow collecting/managing participant data in a Google Sheets backend; integrated APIs; AI-assisted build.
+</p>
+<div className="flex items-center gap-4 mt-4 pt-3" style={{borderTop:'1px solid var(--card-border)'}}>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="github" size={15}/>Source
+</a>
+<a href="#" className="inline-flex items-center gap-1.5 text-sm font-medium" style={{color:'var(--text-sec)',textDecoration:'none',transition:'color 150ms'}} onMouseEnter={e=>e.target.style.color='var(--accent)'} onMouseLeave={e=>e.target.style.color='var(--text-sec)'}>
+<Icon name="externalLink" size={15}/>Live Demo
+</a>
+</div>
+</div>
+</Reveal>
+</div>
+</div>
+</div>
+</section>
+);
+}
+
+function Experience(){
+return(
+<section id="experience" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="sec-num" aria-hidden="true">04</div>
+<div className="max-w-4xl mx-auto px-5 sm:px-6">
+<Reveal>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Experience</span>
+</div>
+</Reveal>
+<div className="mt-10 relative pl-6 sm:pl-8">
+<div className="tl-line" aria-hidden="true"/>
+<div className="tl-dot" aria-hidden="true"/>
+<Reveal delay={100}>
+<div className="exp-card">
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-3">
+<h3 className="font-heading font-semibold text-lg" style={{color:'var(--text)'}}>Data Entry Clerk</h3>
+<span className="font-mono text-xs" style={{color:'var(--accent)'}}>Sep 2024 &ndash; Nov 2025</span>
+</div>
+<div className="text-sm mb-3" style={{color:'var(--secondary)'}}>Anjuman Islamia Musafirkhana <span style={{color:'var(--text-sec)'}}>(Part-time) &middot; Satna MP</span></div>
+<p className="text-sm leading-relaxed" style={{color:'var(--text-sec)',lineHeight:1.7}}>
+Managed visitor registration and payment records in Excel; maintained accurate datasets and transaction records.
+</p>
+</div>
+</Reveal>
+</div>
+</div>
+</section>
+);
+}
+
+function Education(){
+return(
+<section className="relative py-16 sm:py-20 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="max-w-4xl mx-auto px-5 sm:px-6">
+<Reveal>
+<div className="sec-label mb-8">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Education</span>
+</div>
+<div className="edu-card flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+<div>
+<h3 className="font-heading font-semibold text-lg" style={{color:'var(--text)'}}>B.Tech CSE (AI &amp; ML)</h3>
+<div className="text-sm mt-1" style={{color:'var(--text-sec)'}}>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</div>
+</div>
+<div className="text-left sm:text-right flex-shrink-0">
+<div className="font-mono text-xs" style={{color:'var(--text-sec)'}}>Aug 2023 &ndash; Sep 2027 (expected)</div>
+<div className="font-heading font-semibold text-xl mt-1" style={{color:'var(--accent)'}}>CGPA 7.09</div>
+</div>
+</div>
+</Reveal>
+</div>
+</section>
+);
+}
+
+function Certifications(){
+const certs=[
+{title:'Deloitte Australia – Data Analytics Job Simulation',issuer:'Forage',date:'May 2026',url:'https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_6a13e0331d1734c880ab9126_1779714220224_completion_certificate.pdf'},
+{title:'Introduction to Microsoft Excel',issuer:'Simplilearn',date:'May 2026',url:'https://simpli-web.app.link/e/G6YBdvSDA3b'},
+];
+return(
+<section className="relative py-16 sm:py-20 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="sec-num" aria-hidden="true" style={{fontSize:'clamp(4rem,10vw,8rem)'}}>05</div>
+<div className="max-w-4xl mx-auto px-5 sm:px-6">
+<Reveal>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Certifications</span>
+</div>
+</Reveal>
+<div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+{certs.map((c,i)=>(
+<Reveal key={c.title} delay={i*80}>
+<a href={c.url} target="_blank" rel="noopener noreferrer" className="cert-badge group">
+<div className="flex items-start justify-between gap-3">
+<h3 className="font-heading font-semibold text-sm leading-snug" style={{color:'var(--text)'}}>{c.title}</h3>
+<Icon name="externalLink" size={14} className="shrink-0 mt-0.5 opacity-40 group-hover:opacity-100" style={{color:'var(--accent)',transition:'opacity 200ms'}}/>
+</div>
+<div className="font-mono text-xs mt-2" style={{color:'var(--text-sec)'}}>{c.issuer} &middot; {c.date}</div>
+<div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium" style={{color:'var(--accent)'}}>
+View Credential <Icon name="arrowRight" size={11}/>
+</div>
+</a>
+</Reveal>
+))}
+</div>
+</div>
+</section>
+);
+}
+
+function Contact(){
+const[copied,setCopied]=useState(false);
+const doCopy=async()=>{
+try{await navigator.clipboard.writeText('2007faizanali@gmail.com')}
+catch{const t=document.createElement('textarea');t.value='2007faizanali@gmail.com';t.style.position='fixed';t.style.left='-9999px';document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t)}
+setCopied(true);setTimeout(()=>setCopied(false),2000);
+};
+return(
+<section id="contact" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden" style={{borderTop:'1px solid var(--border)'}}>
+<div className="contact-deco" aria-hidden="true" style={{right:'-60px',bottom:'-60px',width:'240px',height:'240px'}}/>
+<div className="contact-deco-inner" aria-hidden="true" style={{right:'-60px',bottom:'-60px',width:'240px',height:'240px'}}/>
+<div className="max-w-4xl mx-auto px-5 sm:px-6 relative z-10">
+<Reveal>
+<div className="sec-label">
+<span className="sec-label-line"/><span className="font-mono text-xs tracking-widest uppercase" style={{color:'var(--accent)'}}>Contact</span>
+</div>
+</Reveal>
+<Reveal delay={80}>
+<h2 className="font-heading font-bold mt-6" style={{fontSize:'clamp(2rem,5vw,3.5rem)',letterSpacing:'-0.03em',color:'var(--text)',lineHeight:1.1}}>
+Let's build something.
+</h2>
+</Reveal>
+<Reveal delay={160}>
+<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a href="mailto:2007faizanali@gmail.com" className="contact-link group">
+<Icon name="mail" size={18} style={{color:'var(--accent)',flexShrink:0}}/>
+<span className="flex-1 text-left truncate" style={{color:'var(--text)'}}>2007faizanali@gmail.com</span>
+<button onClick={e=>{e.preventDefault();e.stopPropagation();doCopy()}} aria-label="Copy email address" className="p-1.5 rounded-md shrink-0" style={{color:copied?'#22C55E':'var(--text-sec)',background:'none',border:'none',cursor:'pointer',transition:'color 150ms'}}>
+<Icon name={copied?'check':'copy'} size={14}/>
+</button>
+{copied&&<span className="text-xs font-medium shrink-0" style={{color:'#22C55E'}}>Copied!</span>}
+</a>
+<a href="tel:+919827666786" className="contact-link">
+<Icon name="phone" size={18} style={{color:'var(--accent)',flexShrink:0}}/>
+<span style={{color:'var(--text)'}}>9827666786</span>
+</a>
+<a href="https://linkedin.com/in/-faizanali" target="_blank" rel="noopener noreferrer" className="contact-link group">
+<Icon name="linkedin" size={18} style={{color:'var(--accent)',flexShrink:0}}/>
+<span className="flex-1" style={{color:'var(--text)'}}>linkedin.com/in/-faizanali</span>
+<Icon name="externalLink" size={14} className="opacity-40 group-hover:opacity-100" style={{color:'var(--text-sec)',transition:'opacity 200ms'}}/>
+</a>
+<span className="contact-link" style={{cursor:'default'}}>
+<Icon name="pin" size={18} style={{color:'var(--accent)',flexShrink:0}}/>
+<span style={{color:'var(--text)'}}>Satna, Madhya Pradesh, India</span>
+</span>
+</div>
+</Reveal>
+</div>
+</section>
+);
+}
+
+function Footer(){
+return(
+<footer className="py-8 sm:py-10" style={{borderTop:'1px solid var(--border)'}}>
+<div className="max-w-6xl mx-auto px-5 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<span className="text-sm" style={{color:'var(--text-sec)'}}>&copy; 2026 Faizan Ali. Built with AI-assisted development.</span>
+<a href="#" onClick={e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}} className="text-sm font-medium" style={{color:'var(--accent)',textDecoration:'none'}}>Back to top &uarr;</a>
+</div>
+</footer>
+);
+}
+
+function App(){
+const[theme,setTheme]=useState(()=>{try{return localStorage.getItem('faizan-theme')||'void'}catch{return'void'}});
+useEffect(()=>{
+if(theme==='dusk')document.documentElement.setAttribute('data-theme','dusk');
+else document.documentElement.removeAttribute('data-theme');
+try{localStorage.setItem('faizan-theme',theme)}catch{}
+},[theme]);
+const toggle=()=>setTheme(t=>t==='void'?'dusk':'void');
+return(
+<Ctx.Provider value={{theme,toggle}}>
+<Navbar/>
+<main id="main-content" role="main">
+<Hero/>
+<About/>
+<Skills/>
+<Projects/>
+<Experience/>
+<Education/>
+<Certifications/>
+<Contact/>
+</main>
+<Footer/>
+</Ctx.Provider>
+);
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
